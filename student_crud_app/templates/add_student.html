@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+{% block content %}
+<h2>Add Student</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}  <!-- CSRF token is included automatically -->
+    <label for="name">Name:</label>
+    {{ form.name }}
+    <label for="age">Age:</label>
+    {{ form.age }}
+    <label for="gender">Gender:</label>
+    {{ form.gender }}
+    <label for="grade">Grade:</label>
+    {{ form.grade }}
+    <button type="submit">{{ form.submit }}</button>
+</form>
+{% endblock %}

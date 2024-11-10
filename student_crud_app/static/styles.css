@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    border: none;
+    background-color: transparent;
+}
+
+/* Body and Container Styling */
+body {
+    background-color: #121212; /* Dark background for the body */
+    color: #e0e0e0; /* Light text for readability */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    padding: 15px 20px;
+    background-color: #1c1c1c; /* Darker background for header */
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333; /* Dark background for navbar */
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 15px;
+}
+
+.navbar a {
+    color: #e0e0e0; /* Light text for links */
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight hover effect */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+/* Form Styling */
+form {
+    background: #1c1c1c; /* Dark background for forms */
+    padding: 20px;
+    border: 1px solid #444; /* Lighter border color */
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #007BFF; /* Primary accent color */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0e0e0; /* Light text for labels */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #555; /* Darker border for inputs */
+    background-color: #333; /* Dark background for inputs */
+    color: #e0e0e0; /* Light text in inputs */
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #444; /* Lighter border for table cells */
+}
+
+th {
+    background-color: #007BFF; /* Accent color for table headers */
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #222; /* Dark row color for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #1e1e1e; /* Slightly lighter dark color for odd rows */
+}
+
+tr:hover {
+    background-color: #333; /* Hover effect on table rows */
+}
+
+/* Button Styling for Edit/Delete with Transparent Background */
+.btn-edit {
+    background-color: rgba(40, 167, 69, 0.1); /* Transparent Green */
+    color: #28a745;
+    border: 1px solid #28a745; /* Green border */
+}
+
+.btn-edit:hover {
+    background-color: rgba(40, 167, 69, 0.2); /* Slightly darker transparent green */
+    color: #218838;
+    border-color: #218838; /* Darker green on hover */
+}
+
+.btn-delete {
+    background-color: rgba(220, 53, 69, 0.1); /* Transparent Red */
+    color: #dc3545;
+    border: 1px solid #dc3545; /* Red border */
+}
+
+.btn-delete:hover {
+    background-color: rgba(220, 53, 69, 0.2); /* Slightly darker transparent red */
+    color: #c82333;
+    border-color: #c82333; /* Darker red on hover */
+}
+
+/* Optional - Add table container for responsive design */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Anchor Styled as Button */
+a.btn {
+    text-decoration: none; /* Removes underline */
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 1s ease;
+}
+
+a.btn-edit {
+    background-color: #28a745;
+}
+
+a.btn-edit:hover {
+    background-color: #218838;
+}
+
+a.btn-delete {
+    background-color: #dc3545;
+}
+
+a.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Flash Messages Styling */
+.flash-messages {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+/* Categories for flash messages */
+.flash.success {
+    background-color: #28a745;
+}
+
+.flash.danger {
+    background-color: #dc3545;
+}
+
+.flash.info {
+    background-color: #17a2b8;
+}
+
+.flash.warning {
+    background-color: #ffc107;
+}
+
+/* Fade-out effect when hiding */
+.flash.fade-out {
+    opacity: 0;
+    display: none;  /* Ensure it's not visible after fading out */
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

@@ -1,0 +1,130 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Dark theme for the body */
+body {
+    background-color: #1c1c1c; /* Dark background for overall site */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Centered form styling */
+form {
+    background: #333; /* Dark background for form */
+    padding: 40px;
+    border: 1px solid #555; /* Lighter border for the form */
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 60px auto;
+}
+
+/* Form title */
+form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007BFF; /* Blue text for form title */
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #e0e0e0; /* Light text for labels */
+    font-size: 16px;
+}
+
+/* Input fields for the login page */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #555; /* Lighter border for input fields */
+    background-color: #222; /* Dark background for inputs */
+    color: #e0e0e0; /* Light text inside inputs */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Login button styling */
+button {
+    background-color: #007BFF; /* Blue background for button */
+    color: white; /* White text */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for button */
+    font-size: 16px;
+}
+
+/* Hover effect for the login button */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Flash messages for success or error */
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.flash.success {
+    background-color: #28a745; /* Green for success messages */
+}
+
+.flash.danger {
+    background-color: #dc3545; /* Red for error messages */
+}
+
+.flash.info {
+    background-color: #17a2b8; /* Blue for info messages */
+}
+
+.flash.warning {
+    background-color: #ffc107; /* Yellow for warnings */
+}
+
+/* Adjust for responsive design */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    form h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

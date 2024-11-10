@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<script>
+    // Automatically hide flash messages after 5 seconds with fade-out effect
+    setTimeout(function() {
+        const flashMessages = document.querySelectorAll('.flash');
+        flashMessages.forEach(function(message) {
+            message.classList.add('fade-out'); // Add fade-out class
+        });
+    }, 3000);
+</script>
+<body>
+     <!-- Flash Messages Section -->
+     {% with messages = get_flashed_messages(with_categories=true) %}
+     {% if messages %}
+         <div class="flash-messages">
+             {% for category, message in messages %}
+                 <div class="flash {{ category }}">{{ message }}</div>
+             {% endfor %}
+         </div>
+     {% endif %}
+ {% endwith %}
+    <header>
+        <div style="display: flex;" class="heading">
+            <h1 >Student CRUD Application </h1>
+            <h4 style="margin:7px;margin-left:1000px;color: greenyellow;;">Developed by Shreyas</h4>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('add_student')}}">Add Student</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p style="color: greenyellow;">Developed by Shreyas</p>
+    </footer>
+</body>
+</html>

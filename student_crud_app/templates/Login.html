@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+    {{ form.hidden_tag() }}  <!-- CSRF token is included automatically -->
+    <label for="username">Username:</label>
+    {{ form.username }}
+    <label for="password">Password:</label>
+    {{ form.password }}
+    <button type="submit" style="border: none;background-color:blue ;" >{{ form.submit }}Login</button>
+</form>
+{% endblock %}
