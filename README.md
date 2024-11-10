@@ -1,4 +1,5 @@
 Student CRUD Application
+
 This is a Student CRUD (Create, Read, Update, Delete) application developed using Flask, SQLAlchemy, and Flask-Login. It allows users to manage student records efficiently with full support for CRUD operations, user authentication. This web app is designed to be intuitive, user-friendly, and secure, providing seamless functionality for managing student data.
 
 Features:
